@@ -1,52 +1,53 @@
+﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
-[CustomEditor(typeof(Inventory))]
-public class InventoryEditor : Editor
-{
-    private bool[] showItemSlots = new bool[Inventory.numItemSlots];
-    private SerializedProperty itemImagesProperty;
-    private SerializedProperty itemsProperty;
+[CustomEditor (typeof(Inventory))]
+public class InventoryEditor : Editor {
 
+    private SerializedProperty itemImagesProporty;
+    private SerializedProperty itemsProporty;
+    private bool[] showItemSlot = new bool[Inventory.numItemSlot];
 
     private const string inventoryPropItemImagesName = "itemImages";
     private const string inventoryPropItemsName = "items";
 
-
-    private void OnEnable ()
+    private void OnEnable()
     {
-        itemImagesProperty = serializedObject.FindProperty (inventoryPropItemImagesName);
-        itemsProperty = serializedObject.FindProperty (inventoryPropItemsName);
+        itemImagesProporty = serializedObject.FindProperty(inventoryPropItemImagesName);
+        itemsProporty = serializedObject.FindProperty(inventoryPropItemsName);
     }
 
-
-    public override void OnInspectorGUI ()
+    public override void OnInspectorGUI()
     {
-        serializedObject.Update ();
+        serializedObject.Update();
 
-        for (int i = 0; i < Inventory.numItemSlots; i++)
+        for (int i = 0; i < Inventory.numItemSlot; i++)
         {
-            ItemSlotGUI (i);
+            ItemSlotGUI(i);
         }
 
-        serializedObject.ApplyModifiedProperties ();
+
+        serializedObject.ApplyModifiedProperties();
     }
 
 
-    private void ItemSlotGUI (int index)
+    private void ItemSlotGUI(int index)
     {
-        EditorGUILayout.BeginVertical (GUI.skin.box);
+        EditorGUILayout.BeginVertical(GUI.skin.box);
         EditorGUI.indentLevel++;
-        
-        showItemSlots[index] = EditorGUILayout.Foldout (showItemSlots[index], "Item slot " + index);
 
-        if (showItemSlots[index])
+        showItemSlot[index] = EditorGUILayout.Foldout(showItemSlot[index], "Item Slot"+ index);
+
+        if (showItemSlot[index])
         {
-            EditorGUILayout.PropertyField (itemImagesProperty.GetArrayElementAtIndex (index));
-            EditorGUILayout.PropertyField (itemsProperty.GetArrayElementAtIndex (index));
+            EditorGUILayout.PropertyField(itemImagesProporty.GetArrayElementAtIndex(index));
+            EditorGUILayout.PropertyField(itemsProporty.GetArrayElementAtIndex(index));
         }
 
         EditorGUI.indentLevel--;
-        EditorGUILayout.EndVertical ();
+        EditorGUILayout.EndVertical();
     }
+
 }
