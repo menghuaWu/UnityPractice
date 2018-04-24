@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2017
+# Visual Studio 15
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Survival Shooter", "Survival Shooter.csproj", "{BAAC924E-1B51-3FF1-6CF5-4D53648C79D5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Survival Shooter.Editor", "Survival Shooter.Editor.csproj", "{B7B7F55C-3175-6F8A-C4EA-0AACA51E84A6}"
