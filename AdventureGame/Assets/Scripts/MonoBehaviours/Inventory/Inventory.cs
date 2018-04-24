@@ -3,12 +3,10 @@ using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
 {
-    public Image[] itemImages = new Image[numItemSlots];
-    public Item[] items = new Item[numItemSlots];
+    public const int numItemSlot = 4;
 
-
-    public const int numItemSlots = 4;
-
+    public Image[] itemImages = new Image[numItemSlot];
+    public Item[] items = new Item[numItemSlot];
 
     public void AddItem(Item itemToAdd)
     {
@@ -24,8 +22,7 @@ public class Inventory : MonoBehaviour
         }
     }
 
-
-    public void RemoveItem (Item itemToRemove)
+    public void RemoveItem(Item itemToRemove)
     {
         for (int i = 0; i < items.Length; i++)
         {
