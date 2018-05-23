@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2017
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataBaseDemo", "DataBaseDemo.csproj", "{6822E03D-BF5B-E8BC-9B6A-B3185CDE56BC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6822E03D-BF5B-E8BC-9B6A-B3185CDE56BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6822E03D-BF5B-E8BC-9B6A-B3185CDE56BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6822E03D-BF5B-E8BC-9B6A-B3185CDE56BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6822E03D-BF5B-E8BC-9B6A-B3185CDE56BC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
