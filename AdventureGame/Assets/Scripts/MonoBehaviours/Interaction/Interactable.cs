@@ -2,12 +2,15 @@
 
 public class Interactable : MonoBehaviour
 {
-    public Transform interactionLocation;
-    public ConditionCollection[] conditionCollections = new ConditionCollection[0];
+    //全部的邏輯與事件
+    //拿來去連結"判斷"與"反映"
+    
+    public Transform interactionLocation;//玩家到達此位置
+    public ConditionCollection[] conditionCollections = new ConditionCollection[0];//連結"條件"
     public ReactionCollection defaultReactionCollection;
 
 
-    public void Interact ()
+    public void Interact ()//判斷是否符合條件
     {
         for (int i = 0; i < conditionCollections.Length; i++)
         {
@@ -15,6 +18,6 @@ public class Interactable : MonoBehaviour
                 return;
         }
 
-        defaultReactionCollection.React ();
+        defaultReactionCollection.React ();//相對的反應
     }
 }

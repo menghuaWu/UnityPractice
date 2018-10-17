@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class AllConditions : ResettableScriptableObject
 {
-    public Condition[] conditions;
+    public Condition[] conditions;//全部的條件
 
 
     private static AllConditions instance;
@@ -39,7 +39,7 @@ public class AllConditions : ResettableScriptableObject
     }
 
 
-    public static bool CheckCondition (Condition requiredCondition)
+    public static bool CheckCondition (Condition requiredCondition)//確認條件是否符合
     {
         Condition[] allConditions = Instance.conditions;
         Condition globalCondition = null;

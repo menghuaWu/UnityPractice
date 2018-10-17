@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2017
+# Visual Studio 15
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdventureGame", "AdventureGame.csproj", "{3F13D47B-EC56-B419-BC95-BF12CD062029}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdventureGame.Editor", "AdventureGame.Editor.csproj", "{20DE8ACC-853B-5CDC-11B9-F243824C3850}"
